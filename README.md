@@ -23,7 +23,7 @@ I have completed tasks given for my internship as a Java Programmer in CodSoft.
 10. Adding a graphical user interface (GUI) for a more user-friendly experience.
 
 ## Task 3:- ATM Interface 
-1.Create a class to represent the ATM machine. 
+1. Create a class to represent the ATM machine. 
 2. Design the user interface for the ATM, including options such as withdrawing, depositing, and checking the balance. 
 3. Implement methods for each option, such as withdraw(amount), deposit(amount), and checkBalance(). 
 4. Create a class to represent the user's bank account, which stores the account balance. 
