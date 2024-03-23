@@ -14,7 +14,7 @@ public class WordCounterV extends JFrame implements ActionListener
     JTextArea t1;
     JTextField filePathTextField;
     JButton button1,button2,button3;
-    JLabel textLabel, fileLabel;
+    JLabel textLabel, fileLabel, label1, label2, label3;
     WordCounterV()
     {
         super("WORD COUNTER BY VINAY");
@@ -26,6 +26,15 @@ public class WordCounterV extends JFrame implements ActionListener
         fileLabel=new JLabel("Enter File Path Here: ");
         fileLabel.setBounds(60,520, 300,40);
 
+        label1=new JLabel("Total words:");
+        label1.setBounds(60,600,300,40);
+
+        label2=new JLabel("Total character including space: ");
+        label2.setBounds(60,650,300,40);
+
+        label3=new JLabel("Total number of words in given file path: ");
+        label3.setBounds(60,700,300,40); 
+        
         filePathTextField=new JTextField();
         filePathTextField.setBounds(60,550,300,35);
 
@@ -47,6 +56,9 @@ public class WordCounterV extends JFrame implements ActionListener
         add(button3);
         add(textLabel);
         add(fileLabel);
+        add(label1);
+        add(label2);
+        add(label3);
         add(t1);
         add(filePathTextField);
         setSize(450,450);
@@ -70,10 +82,12 @@ public class WordCounterV extends JFrame implements ActionListener
                 }
             }
             JOptionPane.showMessageDialog(this,"Total words: "+wordCount);
+            label1.setText("Total words: "+wordCount);
         }
         if(a.getSource()==button2)
         {
             JOptionPane.showMessageDialog(this,"Total Characters including space: "+text.length());
+            label2.setText("Total Characters including space: "+text.length());
         }
 
         if(a.getSource()==button3)
@@ -81,6 +95,7 @@ public class WordCounterV extends JFrame implements ActionListener
             String filePath = filePathTextField.getText();
             int count = countWordsInFile(filePath);
             JOptionPane.showMessageDialog(this,"Word Counter: "+count);
+            label3.setText("Total number of words in given file path: "+count);
         }
     }
     private int countWordsInFile(String filePath) {
